@@ -31,7 +31,7 @@ def GetTextChunks(text):
 
 def GetVectorStore(textChunks):
     embeddings = OpenAIEmbeddings()
-    vectorStore = faiss.from_texts(text=textChunks, embeddings=embeddings)
+    vectorStore = FAISS.from_texts(text=textChunks, embeddings=embeddings)
     return vectorStore
 
 def main():
