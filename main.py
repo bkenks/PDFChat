@@ -34,8 +34,8 @@ def GetTextChunks(text):
 
 
 def GetVectorStore(textChunks):
-    #embeddings = OpenAIEmbeddings()
-    embeddings = HuggingFaceInstructEmbeddings(model_name="hkunlp/instructor-xl")
+    embeddings = OpenAIEmbeddings()
+    #embeddings = HuggingFaceInstructEmbeddings(model_name="hkunlp/instructor-xl")
     vectorStore = FAISS.from_texts(texts=textChunks, embedding=embeddings)
     return vectorStore
 
@@ -45,10 +45,15 @@ def GetConversationChain(vectorStore):
     memory = ConversationBufferMemory(memory_key="chatHistory", return_messages=True)
     conversationChain = ConversationalRetrievalChain.from_llm(
         llm=llm,
-        retriever=vectorStore.as_retreiver(),
+        retriever=vectorStore.as_retriever(),
         memory=memory
     )
     return conversationChain
+
+
+def HandleUserInput(userQuestion):
+    response = st.session_state.conversation({"question":userQuestion})
+    st.write(response)
 
 
 def main():
@@ -61,7 +66,9 @@ def main():
         st.session_state.conversation = None
 
     st.header("Chat with multiple PDFs :books:")
-    st.text_input("Ask a question about your documents:")
+    userQuestion = st.text_input("Ask a question about your documents:")
+    if userQuestion:
+        HandleUserInput(userQuestion)
 
     st.write(user_template.replace("{{MSG}}", "Hello Bot"), unsafe_allow_html=True)
     st.write(bot_template.replace("{{MSG}}", "Hello Human"), unsafe_allow_html=True)
