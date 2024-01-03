@@ -72,7 +72,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://i.imgur.com/RaZuEnb.png)
+[![Product Name Screen Shot][product-screenshot]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -176,4 +176,4 @@ Project Link: [https://github.com/bkenks/PDFChat](https://github.com/bkenks/PDFC
 [license-url]: https://github.com/bkenks/PDFChat/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/briankenkel/
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: https://i.imgur.com/RaZuEnb.png
