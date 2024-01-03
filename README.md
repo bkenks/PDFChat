@@ -104,23 +104,23 @@ To get a local copy up and running follow these simple steps.
    py -3.11 -m venv .venv
    ```
 3. Activate virtual environment
-  ```sh
-  .venv/Scripts/Activate
-  ```
-4. Install packages
+   ```sh
+   .venv/Scripts/Activate
+   ```
+5. Install packages
    ```sh
    pip install -r requirements.txt
    ```
-5. Get an OpenAI API Key at [OpenAI.com](https://openai.com/)
-6. Enter your API in a new file in the working directory called `.env`
+6. Get an OpenAI API Key at [OpenAI.com](https://openai.com/)
+7. Enter your API in a new file in the working directory called `.env`
    ```sh
    OPENAI_API_KEY = 'ENTER YOUR API';
    ```
-7. Run program
+8. Run program
    ```sh
    streamlit run main.py
    ```
-8. Program should open in your browser automatically
+9. Program should open in your browser automatically
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
