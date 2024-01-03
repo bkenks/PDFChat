@@ -31,7 +31,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/bkenks/PDFChat">
-    <h1 style="font-size:10vw">:page_facing_up:</h1>
+    <h1>:page_facing_up:</h1>
   </a>
 
 <h3 align="center">PDFChat</h3>
