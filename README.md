@@ -29,9 +29,10 @@
 
 <!-- PROJECT LOGO -->
 <br />
+<br />
 <div align="center">
   <a href="https://github.com/bkenks/PDFChat">
-    <h1>:page_facing_up:</h1>
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">PDFChat</h3>
