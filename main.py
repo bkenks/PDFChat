@@ -64,7 +64,7 @@ def HandleUserInput(userQuestion):
 
 def main():
     load_dotenv()
-    st.set_page_config(page_title="Chat with multiple PDFs", page_icon=":books:")
+    st.set_page_config(page_title="Chat with your PDFs", page_icon=":books:")
 
     st.header("PDFChat:books:")
 
