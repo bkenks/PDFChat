@@ -69,6 +69,15 @@
 
 
 
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
 <!-- GETTING STARTED -->
 ## Getting Started
 To get a local copy up and running follow these simple steps.
