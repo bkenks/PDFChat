@@ -64,9 +64,9 @@ def HandleUserInput(userQuestion):
 
 def main():
     load_dotenv()
-    st.set_page_config(page_title="Chat with your PDFs", page_icon=":books:")
+    st.set_page_config(page_title="Chat with your PDFs", page_icon=":page_facing_up:")
 
-    st.header("PDFChat:books:")
+    st.header(":page_facing_up: PDFChat")
 
     st.write(css, unsafe_allow_html=True)
 
