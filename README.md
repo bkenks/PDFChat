@@ -39,7 +39,6 @@
 
   <p align="center">
     PDFChat is an application built to "chat" with private data, such as a PDF. Develoment will continue to add support for other types of data.
-    ·
     <a href="https://github.com/bkenks/PDFChat/issues">Report Bug</a>
     ·
     <a href="https://github.com/bkenks/PDFChat/issues">Request Feature</a>
@@ -177,4 +176,4 @@ Project Link: [https://github.com/bkenks/PDFChat](https://github.com/bkenks/PDFC
 [license-url]: https://github.com/bkenks/PDFChat/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/briankenkel/
-[product-screenshot]: https://i.imgur.com/RaZuEnb.png
+[product-screenshot]: https://i.imgur.com/YQoBrCO.png
