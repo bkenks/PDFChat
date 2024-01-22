@@ -176,4 +176,4 @@ Project Link: [https://github.com/bkenks/PDFChat](https://github.com/bkenks/PDFC
 [license-url]: https://github.com/bkenks/PDFChat/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/briankenkel/
-[product-screenshot]: https://i.imgur.com/YQoBrCO.png
+[product-screenshot]: https://github.com/bkenks/PDFChat/blob/main/images/screenshot.png
