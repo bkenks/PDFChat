@@ -114,7 +114,7 @@ To get a local copy up and running follow these simple steps.
 6. Get an OpenAI API Key at [OpenAI.com](https://openai.com/)
 7. Enter your API in a new file in the working directory called `.env`
    ```sh
-   OPENAI_API_KEY = 'ENTER YOUR API';
+   OPENAI_API_KEY=ENTERYOURAPIKEYHERE
    ```
 8. Run program
    ```sh
