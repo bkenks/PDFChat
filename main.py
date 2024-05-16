@@ -80,7 +80,7 @@ def main():
     load_dotenv()
     st.set_page_config(page_title="Chat with your PDFs", page_icon=":page_facing_up:")
 
-    st.header(":page_facing_up: PDFChat")
+    st.header(":page_facing_up: DataChat")
 
     st.write(css, unsafe_allow_html=True)
 
