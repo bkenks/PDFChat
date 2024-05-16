@@ -1,5 +1,7 @@
 import streamlit as st
 from dotenv import load_dotenv
+from pathlib import Path
+from io import StringIO
 from PyPDF2 import PdfReader
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.embeddings import OpenAIEmbeddings, HuggingFaceInstructEmbeddings
@@ -9,6 +11,18 @@ from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
 from htmlTemplates import css, bot_template, user_template
 
+def GetTXTText(txtDocs):
+    text = ""
+
+    for doc in txtDocs:
+        # To convert to a string based IO:
+        stringio = StringIO(doc.getvalue().decode("utf-8"))
+
+        # To read file as string:
+        string_data = stringio.read()
+        text += string_data
+
+    return text
 
 def GetPDFText(pdfDocs):
     text = ""
@@ -81,13 +95,33 @@ def main():
 
     with st.sidebar:
         st.subheader("Your documents")
-        pdfDocs = st.file_uploader(
-            "Upload your PDFs here and click Process", accept_multiple_files=True)
+        userDoc = st.file_uploader(
+            "Upload your PDFs here and click Process", accept_multiple_files=True, type=["txt", "pdf"])
         
         if st.button("Process"):
             with st.spinner("Processing"):
-                # get PDF text
-                rawText = GetPDFText(pdfDocs)
+
+                pdfDocs = []
+                txtDocs = []
+                rawText = ""
+
+                if userDoc is not None:
+                    for doc in userDoc:
+                        suffix = Path(doc.name).suffix
+
+                        match suffix:
+                            case ".pdf":
+                                pdfDocs.append(doc)
+                                st.toast(".pdf")
+                            case ".txt":
+                                txtDocs.append(doc)
+                                st.toast(".txt")
+
+                if pdfDocs is not None:
+                    # get PDF text
+                    rawText += " " + GetPDFText(pdfDocs)
+                    rawText += " " + GetTXTText(txtDocs)
+                
 
                 # get the text chunks
                 textChunks = GetTextChunks(rawText)
